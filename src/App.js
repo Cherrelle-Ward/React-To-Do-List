@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Beer from "./components/beerOfTheDay";
 // ? import { FaSolid, FaPlus } from "react-icons/fa";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 // !!  npm install framer-motion for animations
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
   // DISPLAY LIST
   const [toDo, setToDo] = useState([]);
   // DELETED LIST
-  const [trash, setTrash] = useState([]);
+  // const [trash, setTrash] = useState([]);
   ///////////////////
   // **RANDOM BEER
   const [randomBeer, setRandomBeer] = useState("");
@@ -30,7 +30,7 @@ const App = () => {
       setError(false);
       let response = await fetch("https://api.punkapi.com/v2/beers/random");
       if (response.status !== 200) {
-        throw new Error("oopsie!");
+        throw new Error(error);
       }
       let data = await response.json();
       setRandomBeer(data);
