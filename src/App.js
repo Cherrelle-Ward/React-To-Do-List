@@ -64,6 +64,7 @@ const App = () => {
   useEffect(() => {
     handleFetch();
     console.log("use effect worked");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!randomBeer) {
     return <h1>loading...</h1>;
